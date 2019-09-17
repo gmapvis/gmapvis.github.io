@@ -1,89 +1,166 @@
-<!doctype html>
-<html>
-  <head>
-    <!--
-    -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="keywords" content="Visualization, information visualziation, visualization recommendation, visualization recommender, recommending visualizations, visualization library">
-    <title>Visualization by Demonstration</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="shortcut icon" type="image/png" href="encoding.png">
-    <link rel="stylesheet" href="stylesheets/table.css">
-<!--     <script src="machine_learning.min.js"></script> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jung Wook Park">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Vis by Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="plugin/fontawesome/css/all.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Font for Navbar-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
 
-    <meta name="viewport" content="width=device-width">
-  </head>
+</head>
 
-  <body>
-    <script>
-      $('table td, table th').hover(function () {
-      $('table td:nth-child(' + ($(this).index() + 1) + ')').addClass('hover');
-      },function () {
-          $('table td:nth-child(' + ($(this).index() + 1) + ')').removeClass('hover');
-      });
-    </script>
-    <div class="wrapper">
-      <section>
-        <div>
-<!--           <div style="float:left; margin-right:5px; "> <img src="encoding.png" style=" width: 21px;"alt="encoding"></div>
-          -->
-          <h2> Investigating the Effectiveness of Large Network Visualizations </h2>
-        <!--   <h4><font color="#1379DC">Bahador Saket, Samuel Huron, Charles Perin, Alex Endert</font></h4> -->
+<body>
+    <div class="container">
+        <div class="research project-title">
+            <h1>Investigating the Effectiveness of Large Network Visualizations</h1>
         </div>
-   
-         <div class="header">
-          <ul>
-            <li>
-              <a href="https://github.com/gmapvis/gmapvis.github.io">
-                Fork on <strong style="line-height: 130%;">GitHub</strong>
-              </a>
-            </li>
-             <li>
-              <a href="http://gmap.cs.arizona.edu/">
-                Link to<strong style="line-height: 130%;">GMap Demo</strong>
-              </a>
-            </li>
-             <li>
-              <a href="https://www.youtube.com/watch?v=1qWDm-ksKQM">
-                Link to<strong style="line-height: 130%;">Video</strong>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-        </div>
-
-        <!-- <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p> -->
-        <p style="margin-top:-15px">
-         Although task taxonomies are available for network visualizations, none specifically deal with the visualization of clustered networks. Clustered networks, i.e., networks where nodes are grouped based on a priori knowledge or structural properties, are fairly common (e.g., communities in social networks, or co-activated proteins in protein-protein interaction networks). In our work, we first defined a list of 31 group-level tasks both from studying the user interaction with network visualizations from interviewing experts in the field. We then divided these group-level tasks into four subcategories according to the information required to solve them. After designing our taxonomy, we compared the effectiveness of three different types of network visualizations (Node, Node-Link, Node-Link-Group visualizations). While the three visualization types look different and have different characteristics, they all represent the same relational dataset. We assessed these three types of network visualization with a controlled experiment that covers different tasks. Results of our analysis indicated that Node-Link-Group visualizations are significantly faster and more accurate than other two types of network visualizations for group-based tasks. This finding is really important since it contradicts results in other studies, in similar but subtly different settings.<br><br>
-      
-       <div style="width: 70%; margin: auto; margin-bottom: 15px;">
-         <img src="screenshot.png" alt="Italian Trulli">
-        </div>
-        
-         We then conducted an experiment to assess how well people memorize the underlying data represented in two different network visualizations of the same relational data: Node-Link and Node-Link-Group visualizations. Our experiment can be summarized in three phases. In phase 1, human subjects were simply instructed to look at two types of visualizations for as long as they wanted. In phase 2, human subjects were asked to perform six different tasks while the visualization corresponding to each task was provided below the description of the task. In phase 3, the subjects were first verbally reminded of the two visualizations that they worked with. We then asked the participants to perform nine tasks. We removed the visualizations and we expected the participants to perform the tasks using their recollection of the visualizations that they worked with before. The main result of our study is that human subjects who used Node-Link-Group visualizations had significantly more accurate recall than those who used Node-Link visualizations. <br><br>
-
-         In a different study, we designed a novel model for measuring enjoyment in data visualizations. Our proposed model suggests that enjoyment in information visualization encompasses six different elements (Challenge, Focus, Clarity, Feedback, Control, and Immersion), to measure enjoyment evaluations must control as many of these elements as possible. To test our proposed model, we conducted an experiment with human subjects to study the enjoyment of node-link and node-link-group visualization types. In our experiment, human subjects were asked to perform three different sets of tasks (node-based, network-based and group-based) using the Node-Link and Node-Link-Group visualizations with different sizes, densities and datasets. The tasks and visualizations were presented in a random order. Software guided the participants through the experiment by providing task instructions. In order to measure the level of enjoyment of performing each specific set of tasks using each visualization, after performing each set of tasks we asked questions about different elements of our proposed enjoyment model. For example, we asked participants to select how distractive they feel the visualization was by selecting a number from -2 (very distractive) to 2 (not distractive at all). Overall, our results indicated that Node-Link-Group visualizations are more enjoyable than Node-Link visualizations. Specifically, our findings indicate that people felt that challenges in the Node-Link-Group visualizations matched their skills significantly better than in the Node-Link visualizations. They also felt that it was significantly easier to follow the progress while working with Node-Link-Group visualizations. Finally, participants believed that Node-Link-Group visualizations were significantly more immersive than node-link visualizations. 
-
-
-       </p>
- 
-   
     </div>
-    <script src="javascripts/scale.fix.js"> </script>
-    <script src="javascripts/UI.js"> </script>
-    <script src="kopol.min.js"> </script>
-    
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <!-- <script src="javascripts/table.js"></script> -->
+
+    <div class="container">
+        <!-- Research -->
+        <div class="research">
+            <div class="content">
+                <div class="info">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="detail">
+                                <!-- [****EDIT****] Project Members -->
+                                <p>
+                                    <i class="fas fa-users"></i> Main Investigators
+                                    <span>Bahador Saket
+                                        <br>
+                                        Stephen Kobourov</span>
+                                </p>
+                                <!-- [****EDIT****]Project Sponsors -->
+                                <p>
+                                    <i class="far fa-money-bill-alt"></i> Sponsors
+                                    <span>National Science Foundation</span>
+                                </p>
+                                <!-- [****EDIT****] Publication-->
+                                <ul class="publication-list">
+                                    <i class="fas fa-download"></i> Publications
+                                    <li>
+                                        <a href="https://bahadorsaket.com/publication/nlg_diagrams.pdf" target="_blank">InfoVis 2014</a>
+                                        <a href="https://bahadorsaket.com/publication/crossings.pdf" target="_blank">GD 2014</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bahadorsaket.com/publication/group_tax.pdf" target="_blank">EuroVis 2014</a>
+                                        <a href="https://bahadorsaket.com/publication/eurovis_long_2015.pdf" target="_blank">EuroVis 2015</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://bahadorsaket.com/publication/eurovis_short_2015.pdf" target="_blank">EuroVis 2015</a>
+                                        <a href="https://bahadorsaket.com/publication/enjoy.pdf" target="_blank">EuroVis 2016</a>
+                                    </li>
+                                </ul>
+
+                                <!-- [****EDIT****]Video -->
+                                <!-- <p>
+                                    <i class="fas fa-video"></i> Videos
+                                    <span>
+                                        <a href="https://www.youtube.com/watch?v=JFdStB0nYRs&t=4s"
+                                            target="_blank">VisExemplar</a>
+                                        <br>
+                                        <a href="https://vimeo.com/327476247" target="_blank">Liger</a></span>
+                                    </span>
+                                </p> -->
+                                <!-- [****EDIT****] Source Code -->
+                                <!-- <p>
+                                    <i class="fas fa-code-branch"></i> Source Code
+                                    <span>
+                                        <a href="https://github.com/visbydemo" target="_blank">Fork on Github</a>
+                                    </span>
+                                </p> -->
+                                <!-- [****EDIT****] Status -->
+                                <p>
+                                    <i class="fas fa-tasks"></i> Status
+                                    <span>Completed</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-9 col-content">
+                            <!-- <h4>Sub-title?</h4> -->
+                            <p>Today, anyone on the Internet has access to much of humankind’s collective knowledge and expertise. While this grand flow of information provides a plethora of opportunities, it can also be an overwhelming deluge making it
+                                urgent that we answer the question of how best to amplify human perception and cognition to navigate, manage, and make sense of this ever-expanding, advancing knowledge. For decades, Node-link visualizations have been employed
+                                as visual interfaces to relational datasets. Node-link visualizations date back to the 18th century and the “seven bridges of Konigsberg” problem, modeled by L. Euler with nodes (for the different parts of the city) and
+                                links (for the bridges between them). However, traditional node-link visualizations often fail to capture the underlying structural information, clustering, and neighborhoods. In response, we propose GMap, a technique for
+                                visualizing relational datasets as maps. GMap, provides a way to overcome some of the shortcomings with the help of the geographic map metaphor. While graphs, charts, and tables often require considerable effort to comprehend,
+                                a map representation is more intuitive, as most people are very familiar with maps and even enjoy carefully examining maps. For instance, Fig. 1 shows a map of all major sciences (color coded and large labels) and 554 subdisciplines
+                                (smaller labels) with a zoom into computer science. In this project, we introduced task taxonomies and frameworks for assessing GMap visualizations. We conducted a series of studies to investigate the effectiveness of GMaps
+                                from various aspects such as memorability, usability, and engagement.</p>
+                            <div class="image-container">
+                                <img src="images/ucsd_of_map.png">
+                            </div>
+                            <p class="fig-label">
+                                <b>Figure 1:</b> The UCSD map of science visualized with GMap.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
 
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')
+    </script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ubicomp.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106316804-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments)
+        };
+        gtag('js', new Date());
+
+        gtag('config', 'UA-106316804-1');
+    </script>
 </body>
 
 </html>
